@@ -19,15 +19,6 @@ function TasksComponent() {
     setTasks([...tasks, task])
   }
 
-  const toggleTask = ({id}: { id:string }) => {
-    setTasks(tasks.map((task)=> {
-      if(task.id=== id) {
-        return{...task, isCompleted:!task.isCompleted} // invert the task isCompleted boolean
-      }
-      return task;
-    }))
-  }
-
   const toggleRemoveTask = ({ id }: { id: string }) => {
     setTasks(tasks.filter(task => task.id !== id));
   };
